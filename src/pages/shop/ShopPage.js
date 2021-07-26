@@ -4,7 +4,7 @@ import { Route } from "react-router-dom";
 import { createStructuredSelector } from "reselect";
 import collectionOverview from "../../components/collection-oveview/collection-overview";
 import WithSpiner from "../../components/with-spiner/with-spiner";
-import { fetchCollectionsStartAsync } from "../../redux/shop/shop.actions";
+import { fetchCollectionsStart, fetchCollectionsStartAsync } from "../../redux/shop/shop.actions";
 import { selectCollectionIsFetching } from "../../redux/shop/shop.selectors";
 import CollectionPage from "../collection/collection";
 import "./ShopPage.scss";
@@ -36,7 +36,7 @@ const mapStateToProps = createStructuredSelector(
 )
 
 const mapToDispatchProps = (dispatch) => ({
-    fetchCollections: () => dispatch(fetchCollectionsStartAsync())
+    fetchCollections: () => dispatch(fetchCollectionsStart())
 })
 
 
